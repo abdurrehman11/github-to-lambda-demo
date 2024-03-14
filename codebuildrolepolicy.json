@@ -11,11 +11,11 @@
                 "logs:PutLogEvents",
                 "lambda:UpdateAlias",
                 "lambda:PutFunctionConcurrency",
-                "s3:PutObject",
-                "s3:GetObject",
                 "codebuild:CreateReportGroup",
                 "codebuild:CreateReport",
                 "lambda:UpdateFunctionCode",
+                "s3:PutObject",
+                "s3:GetObject",
                 "logs:CreateLogStream",
                 "lambda:AddPermission",
                 "codebuild:UpdateReport",
@@ -23,18 +23,19 @@
                 "lambda:DeleteAlias",
                 "lambda:PublishVersion",
                 "lambda:DeleteFunctionConcurrency",
-                "s3:GetBucketLocation",
                 "codebuild:BatchPutTestCases",
                 "lambda:RemovePermission",
+                "s3:GetBucketLocation",
                 "s3:GetObjectVersion",
                 "lambda:CreateAlias"
             ],
             "Resource": [
-                "arn:aws:logs:us-east-1:471112663332:log-group:/aws/codebuild/github-cicd-demo",
-                "arn:aws:logs:us-east-1:471112663332:log-group:/aws/codebuild/github-cicd-demo:*",
-                "arn:aws:s3:::codepipeline-us-east-1-*",
                 "arn:aws:codebuild:us-east-1:471112663332:report-group/github-cicd-demo-*",
-                "arn:aws:lambda:us-east-1:471112663332:function:github-to-lambda-cicd"
+                "arn:aws:lambda:us-east-1:471112663332:function:github-to-lambda-cicd",
+                "arn:aws:s3:::cicd-lambda-builds-zip",
+                "arn:aws:s3:::cicd-lambda-builds-zip/*",
+                "arn:aws:logs:us-east-1:471112663332:log-group:/aws/codebuild/github-cicd-demo",
+                "arn:aws:logs:us-east-1:471112663332:log-group:/aws/codebuild/github-cicd-demo:*"
             ]
         }
     ]
